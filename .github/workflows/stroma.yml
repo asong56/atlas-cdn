@@ -1,0 +1,28 @@
+name: Stroma → stroma
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'src/js/stroma.js'
+      - 'src/js/stroma.d.ts'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+
+      - run: bun install && bun run build:stroma
+
+      - uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: stroma
+          folder: dist/stroma
+          clean: true
+          single-commit: true
