@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
+  <circle cx="56" cy="128" r="22">
+    <animate id="p_a" begin="0;p_c.end-0.25s" attributeName="r" dur="0.75s" values="22;4;22" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1"/>
+  </circle>
+  <circle cx="128" cy="128" r="22">
+    <animate begin="p_a.end-0.6s" attributeName="r" dur="0.75s" values="22;4;22" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1"/>
+  </circle>
+  <circle cx="200" cy="128" r="22">
+    <animate id="p_c" begin="p_a.end-0.45s" attributeName="r" dur="0.75s" values="22;4;22" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1"/>
+  </circle>
+</svg>
